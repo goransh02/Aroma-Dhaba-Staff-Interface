@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Aromas</h1>
+    <span class="menu-spacer"></span>
+    <div>
+
+      <a mat-button [routerLink]="'/activities'"> Active Items </a>
+      <a mat-button [routerLink]="'/create-activity'"> Create Item </a>
+
+    </div>
+  </mat-toolbar-row>
+
+
+
+</mat-toolbar>
+<div class="container" dir="ltr">
+  <mat-card style="max-width: 400px;" *ngFor="let card of highlights" style="display: flex;">
+    <mat-card-header>
+      <mat-card-title>{{card.title}}</mat-card-title>
+      <mat-card-subtitle>{{card.date}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{card.image}}" alt="{{card.alt}}" style="height: 5mm;width:5mm">
+    <mat-card-content>
+      <p>
+        {{card.content}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+</div>
