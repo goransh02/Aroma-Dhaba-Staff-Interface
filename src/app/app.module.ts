@@ -39,12 +39,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { HomepageComponent } from './final/homepage/homepage.component';
 //import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    HomepageComponent
   ],
 
   imports: [
@@ -86,7 +88,7 @@ import { MatTreeModule } from '@angular/material/tree';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-
+    AppRoutingModule,
     //[ RouterModule.forRoot(routes) ],
 
   ],
