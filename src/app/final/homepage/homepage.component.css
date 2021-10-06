@@ -1,28 +1,29 @@
-.main{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    position: relative;
-    background-color: transparent !important;
-   }
-  
-  .container, .mcontainer {
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  position: relative;
+  background-color: transparent !important;
+}
+
+.container,
+.mcontainer {
   position: relative;
   width: 100%;
   /* top: 60px;
   left: calc(50% - 300px); */
   margin-bottom: 60px;
-  }
-  
-  .container{
-    display: flex;
-  }
-  
-  .mcontainer{
-    display: none;
-  }
-  
-  .card{
+}
+
+.container {
+  display: flex;
+}
+
+.mcontainer {
+  display: none;
+}
+
+.card {
   display: flex;
   height: 420px;
   width: 340px;
@@ -32,9 +33,10 @@
   /*   margin-left: -50px; */
   transition: 0.4s ease-out;
   position: relative;
-  }
-  .mcard {
-    display: block;
+}
+
+.mcard {
+  display: block;
   height: 420px;
   width: 340px;
   background-color: white;
@@ -44,94 +46,127 @@
   transition: 0.4s ease-out;
   position: relative;
   margin: 40px auto;
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    display: none;
   }
-  @media only screen and (max-width: 770px){
-    .container{
-      display: none;
-    }
-  
-    .mcontainer{
-      display: block;
-      margin: 10px auto;
-      justify-content: center;
-    }
+
+  .mcontainer {
+    display: block;
+    margin: 10px auto;
+    justify-content: center;
   }
-  .card:not(:first-child) {
-    margin-left: -50px;
-  }
-  
-  .card:hover {
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
   transform: translateY(-20px);
   transition: 0.4s ease-out;
-  }
-  
-  .card:hover ~ .card {
+}
+
+.card:hover~.card {
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
-  }
-  
-  h4.title{
+}
+
+h4.title {
   color: black;
   font-weight: 600;
   position: relative;
   padding-top: 0px;
   margin-top: 5px;
   margin-left: 10px;
-  }
-  
-  .content {
+}
+
+.content {
   position: relative;
   color: black;
   margin-left: 10px;
-  }
-  
-  .circle {
+}
+
+.circle {
   position: absolute;
   bottom: 20px;
   left: calc(50% - 60px);
-  }
-  
-  .stroke {
+}
+
+.stroke {
   stroke: white;
   stroke-dasharray: 360;
   stroke-dashoffset: 360;
   transition: 0.6s ease-out;
-  }
-  
-  svg {
+}
+
+svg {
   fill: #17141d;
   stroke-width: 2px;
-  }
-  
-  .card:hover .stroke {
+}
+
+.card:hover .stroke {
   stroke-dashoffset: 100;
   transition: 0.6s ease-out;
+}
+
+.producti {
+  border-radius: 10px 10px 0px 0px;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.modal-body {
+  animation-name: zoom;
+  animation-duration: 1s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.5)
   }
-  .producti{
-    border-radius: 10px 10px 0px 0px;
-    position: relative;
-    margin-bottom: 0px;
+
+  75% {
+    transform: scale(1.1)
   }
-  .modal-body{
-    animation-name: zoom;
-    animation-duration: 1s;
+
+  100% {
+    transform: scale(1)
   }
-  
-  @keyframes zoom{
-    0%   {transform: scale(0.5)}
-    75%  {transform: scale(1.1)}
-    100% {transform: scale(1)}
-  }
-  
-  .FAQ{
+}
+
+.FAQ {
   margin: 70px;
   border: 40px;
-  }
-  
-  .FAQ1{
-    background-color: #004326;
-    color: #f8f3e8;
-   border-width: 5px;
-    border: 40px;
-    }
+}
+
+.FAQ1 {
+  background-color: #004326;
+  color: #f8f3e8;
+  border-width: 5px;
+  border: 40px;
+  text-align: center;
+}
+
+.FAQ2 {
+  background-color: #e6d81c;
+  color: #f8f3e8;
+  border-width: 5px;
+  border: 40px;
+  text-align: center;
+}
+
+.FAQ3 {
+  background-color: #41755e;
+  color: #f8f3e8;
+  border-width: 5px;
+  border: 40px;
+  text-align: center;
+}
+
+.page-title-big {
+  text-align: center;
+}
