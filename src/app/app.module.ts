@@ -40,14 +40,19 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { HomepageComponent } from './final/homepage/homepage.component';
-//import { RouterModule, Routes } from '@angular/router';
+
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
+
     AppComponent,
     LandingComponent,
-    HomepageComponent
+    HomepageComponent,
+
   ],
+
 
   imports: [
     BrowserModule,
@@ -89,11 +94,19 @@ import { HomepageComponent } from './final/homepage/homepage.component';
     MatTooltipModule,
     MatTreeModule,
     AppRoutingModule,
-    //[ RouterModule.forRoot(routes) ],
 
+    RouterModule,
+    RouterModule.forRoot([
+      { path: 'home', component: HomepageComponent },
+      { path: 'landing', component: LandingComponent }
+
+    ])
   ],
+  exports: [RouterModule],
 
   providers: [],
   bootstrap: [AppComponent]
+
 })
+
 export class AppModule { }
