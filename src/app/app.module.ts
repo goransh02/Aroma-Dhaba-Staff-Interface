@@ -42,6 +42,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { HomepageComponent } from './final/homepage/homepage.component';
 
 import { RouterModule } from '@angular/router';
+import { FinalComponent } from './final/final.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     LandingComponent,
     HomepageComponent,
+    FinalComponent,
 
   ],
 
