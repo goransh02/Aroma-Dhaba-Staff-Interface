@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
+import { Router } from '@angular/router';
+
+import { HttpClient } from '@angular/common/http';
+
 export interface Task {
   name: string;
   completed: boolean;
@@ -15,52 +19,63 @@ export interface Task {
 
 export class HomepageComponent {
 
-  task: Task = {
-    name: 'Vegeterian',
-    completed: false,
-    color: 'primary',
-    subtasks: [
-      { name: 'Paneer Sharwma', completed: false, color: 'primary' },
-      { name: 'Paneer Frankie', completed: false, color: 'primary' },
-      { name: 'Kurkure Chat', completed: false, color: 'primary' },
-      { name: 'Paneer Tagda Frankie', completed: false, color: 'primary' },
-      { name: 'Chilly Paneer Dry', completed: false, color: 'primary' },
-      { name: 'Paneer Hakka Knoodles', completed: false, color: 'primary' },
-    ]
-  };
-  task1: Task = {
-    name: 'Non-Veg',
-    completed: false,
-    color: 'primary',
-    subtasks: [
-      { name: 'Chicken Sharwma', completed: false, color: 'primary' },
-      { name: 'Chicken Frankie', completed: false, color: 'primary' },
-      { name: 'Chicken Knoodles', completed: false, color: 'primary' },
-      { name: 'Chicken Tagda Frankie', completed: false, color: 'primary' },
-      { name: 'Egg Paneer Frankie', completed: false, color: 'primary' },
-      { name: 'Chicken Hakka Knoodles', completed: false, color: 'primary' },
-    ]
-  };
+  pendingproducts: any;
+  acceptedproducts: any;
+  dispatchedproducts: any;
+  panelOpenState = true;
+  orders = [
+    {
+        token: 0,
+        items: [
+            {
+                index: 0,
+                quantity: 2,
+            },
+            {
+                index: 1,
+                quantity: 3,
+            },
+        ],
+        total_amt: 110,
+        status: 0,
+        details: {
+            name: "Aniket",
+            phone: "9636541817",
+            hostel: "h3",
+        }
+    },
+    {
+        token: 1,
+        items: [
+            {
+                index: 0,
+                quantity: 2,
+            },
+            {
+                index: 1,
+                quantity: 3,
+            },
+        ],
+        total_amt: 110,
+        status: 0,
+        details: {
+            name: "Aniket",
+            phone: "9636541817",
+            hostel: "h3",
+        }
+    },
+]
+  constructor(private http: HttpClient, private router: Router) { }
+  ngOnInit(): void {
+    var url = "http://192.168.0.100:3000/get_pending_orders/"
+    
+    this.http.get<any>(url).subscribe(
+      data => {
+        this.pendingproducts = data
+        console.log(data)
+      }
+    )
 
-  allComplete: boolean = false;
-  panelOpenState = false;
-  updateAllComplete() {
-    this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
-  }
 
-  someComplete(): boolean {
-    if (this.task.subtasks == null) {
-      return false;
-    }
-    return this.task.subtasks.filter(t => t.completed).length > 0 && !this.allComplete;
-  }
-
-  setAll(completed: boolean) {
-    this.allComplete = completed;
-    if (this.task.subtasks == null) {
-      return;
-    }
-    this.task.subtasks.forEach(t => t.completed = completed);
   }
 }
-

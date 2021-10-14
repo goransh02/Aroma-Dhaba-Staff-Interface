@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -96,6 +97,7 @@ import { FinalComponent } from './final/final.component';
     MatTooltipModule,
     MatTreeModule,
     AppRoutingModule,
+    HttpClientModule,
 
     RouterModule,
     RouterModule.forRoot([

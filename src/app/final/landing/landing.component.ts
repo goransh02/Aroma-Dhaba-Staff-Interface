@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
+import { Router } from '@angular/router';
+
+import { HttpClient } from '@angular/common/http';
+
 export interface Task {
   name: string;
   completed: boolean;
@@ -12,6 +16,11 @@ export interface Task {
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
+  pendingproducts: any;
+  acceptedproducts: any;
+  dispatchedproducts: any;
+  constructor(private http: HttpClient, private router: Router) { }
+  ngOnInit(): void { }
 
   task: Task = {
     name: 'Vegeterian',
@@ -59,5 +68,6 @@ export class LandingComponent {
     }
     this.task.subtasks.forEach(t => t.completed = completed);
   }
+
 }
 
