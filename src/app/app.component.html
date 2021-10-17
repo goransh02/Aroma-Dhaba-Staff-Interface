@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Aromas</h1>
+    <span class="menu-spacer"></span>
+    <div>
+
+      <a mat-button [routerLink]="'/home'"> Order List </a>
+      <a mat-button [routerLink]="'/landing'"> Edit Active Items </a>
+
+    </div>
+  </mat-toolbar-row>
+
+
+
+</mat-toolbar>
+<router-outlet></router-outlet>
