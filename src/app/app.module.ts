@@ -45,6 +45,7 @@ import { HomepageComponent } from './final/homepage/homepage.component';
 import { RouterModule } from '@angular/router';
 import { FinalComponent } from './final/final.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,8 @@ import { FinalComponent } from './final/final.component';
 
 
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
