@@ -4,8 +4,8 @@
     <h1 class="page-title-big">Shipped</h1>
     <mat-accordion class="FAQ">
       <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="FAQ1">
-        <mat-icon >assignment_turned_in</mat-icon>
-        <mat-expansion-panel-header *ngFor = "let dataS of orders">
+        <mat-icon>assignment_turned_in</mat-icon>
+        <mat-expansion-panel-header *ngFor="let dataS of orders">
 
           <mat-panel-description style="color: #f8f3e8;">
             {{dataS}}
@@ -112,4 +112,3 @@
     </mat-accordion>
   </div>
 </div>
-
