@@ -46,6 +46,7 @@ import { RouterModule } from '@angular/router';
 import { FinalComponent } from './final/final.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddItemComponent } from './final/homepage/add-item/add-item.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LandingComponent,
     HomepageComponent,
     FinalComponent,
+    AddItemComponent,
 
   ],
 

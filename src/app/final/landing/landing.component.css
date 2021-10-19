@@ -6,6 +6,12 @@
       position: relative;
       background-color: transparent !important;
     }
+    .example-margin{
+      color:azure;
+    }
+    .example-list-section{
+      color: azure;
+    }
     
     .container,
     .mcontainer {

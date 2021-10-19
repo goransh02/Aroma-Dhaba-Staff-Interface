@@ -138,20 +138,20 @@ svg {
   }
 }
 
-.FAQ {
+.FAQ{
   margin: 70px;
   border: 40px;
 }
 
-.FAQ1 {
-  background-color: #004326;
+.FAQ1{
+  background-color: #289c3c;
   color: #f8f3e8;
   border-width: 5px;
   border: 40px;
   text-align: center;
 }
 
-.FAQ2 {
+.FAQ2{
   background-color: #e6d81c;
   color: #f8f3e8;
   border-width: 5px;
@@ -159,8 +159,8 @@ svg {
   text-align: center;
 }
 
-.FAQ3 {
-  background-color: #41755e;
+.FAQ3{
+  background-color: #db4408;
   color: #f8f3e8;
   border-width: 5px;
   border: 40px;

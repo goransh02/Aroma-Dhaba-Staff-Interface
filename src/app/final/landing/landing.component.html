@@ -8,9 +8,9 @@
     </span>
     <span class="example-list-section">
       <ul>
-        <li *ngFor="let subtask of pendingproducts" style="display: inlin;">
+        <li *ngFor="let subtask of task.subtasks" >
           <mat-checkbox ([ngModel])="subtask.completed" [color]="subtask.color" (ngModelChange)="updateAllComplete()">
-            {{subtask.token}}
+            {{subtask.name}}
           </mat-checkbox>
         </li>
       </ul>

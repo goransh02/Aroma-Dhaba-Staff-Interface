@@ -1,19 +1,16 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <button mat-icon-button>
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1>Aromas</h1>
-    <span class="menu-spacer"></span>
-    <div>
-
-      <a mat-button [routerLink]="'/home'"> Order List </a>
-      <a mat-button [routerLink]="'/landing'"> Edit Active Items </a>
-
-    </div>
-  </mat-toolbar-row>
 
 
 
-</mat-toolbar>
+<header>
+  <img class="logo" src="https://picsum.photos/200/50" alt="Site Logo">
+  
+  <nav>
+    <ul class="nav__links">
+      <li><a href="/home">Item-List</a></li>
+      <li><a href="/landing">Order-timeline</a></li>
+      <li><a href="/Add">Add Item</a></li>
+    </ul>
+  </nav>
+</header>
+<body><
 <router-outlet></router-outlet>
